@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Clientes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        .abc{
+            color: red;
+            border: 2px solid red;
+        }
+        input{
+            color: blue;
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <form action="{% url 'cadastrarCliente' %}" method="POST">
+        {{form.subject.errors}}
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .abc{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="{% url 'cadastrarGrupoCliente' %}" method="POST">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
